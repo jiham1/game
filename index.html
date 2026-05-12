@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spell-Craft Tactics</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>SPELL-CRAFT TACTICS</h1>
+            <div id="player-info">
+                <span id="player-name">Connecting...</span> | 
+                HP: <span id="player-hp">100</span> | 
+                Gold: <span id="player-gold">10</span> | 
+                LV: <span id="player-lv">1</span> | 
+                AP: <span id="player-ap">0</span>
+            </div>
+        </header>
+
+        <main>
+            <div id="combat-area" class="hidden">
+                <div id="opponent-info">
+                    Opponent: <span id="opponent-name">-</span> | 
+                    HP: <span id="opponent-hp">100</span>
+                </div>
+                <div id="combat-log"></div>
+            </div>
+
+            <div id="shop-area">
+                <h2>SHOP</h2>
+                <div id="shop-cards"></div>
+                <div class="shop-controls">
+                    <button id="roll-btn">Reroll (2G)</button>
+                    <button id="exp-btn">Buy EXP (4G)</button>
+                    <button id="find-match-btn">Find Match</button>
+                </div>
+            </div>
+
+            <div id="inventory-area">
+                <h2>INVENTORY (Max 10)</h2>
+                <div id="inventory-cards"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/client.js"></script>
+</body>
+</html>

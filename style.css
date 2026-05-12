@@ -1,0 +1,133 @@
+body {
+    background-color: #0d0d0d;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#game-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid #00ffcc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc;
+    margin: 0;
+}
+
+#player-info {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#combat-area {
+    background: #1a1a1a;
+    border: 1px solid #ff0055;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);
+}
+
+#combat-log {
+    height: 100px;
+    overflow-y: auto;
+    background: #000;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #00ffcc;
+}
+
+#shop-area, #inventory-area {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #00ffcc;
+}
+
+#shop-cards, #inventory-cards {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px 0;
+}
+
+.card {
+    background: #262626;
+    border: 2px solid #555;
+    padding: 10px;
+    width: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, border-color 0.2s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ffcc;
+}
+
+.card.tier-1 { border-color: #aaa; }
+.card.tier-2 { border-color: #007bff; }
+.card.tier-3 { border-color: #ff00ff; }
+
+.card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+}
+
+.card p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.shop-controls {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: #00ffcc;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #00cca3;
+}
+
+button:disabled {
+    background: #444;
+    cursor: not-allowed;
+}
+
+#find-match-btn {
+    background: #ff0055;
+    color: #fff;
+}
